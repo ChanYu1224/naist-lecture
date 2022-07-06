@@ -40,16 +40,16 @@ class MLP(nn.Module):
 
 def train(model, optimizer, loss_function):
     X = torch.tensor([
-        [0,0],
-        [0,1],
-        [1,0],
         [1,1],
+        [0,1],
+        [0,0],
+        [1,0],
     ], dtype=torch.float)
     y = torch.tensor([
         [1], 
         [-1], 
-        [-1],
         [1],
+        [-1],
     ], dtype=torch.float)
 
     for t, x in enumerate(X):
